@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".seguros.SeguroVida">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_clear"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <ImageView
+        android:id="@+id/iv_seguro_cartao"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_mensagem_um"
+        app:layout_constraintEnd_toStartOf="@+id/tv_mensagem_um"
+        app:layout_constraintTop_toTopOf="@+id/tv_nao_preocupe"
+        app:srcCompat="@drawable/ic_seguro_vida_branco" />
+
+    <TextView
+        android:id="@+id/tv_nao_preocupe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/tv_para_vc"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ic_clear" />
+
+    <TextView
+        android:id="@+id/tv_mensagem_um"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="@string/tv_frase_header"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nao_preocupe"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nao_preocupe" />
+
+    <TextView
+        android:id="@+id/tv_mensagem_dois"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/tv_frase_garantia"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_mensagem_um"
+        app:layout_constraintStart_toStartOf="@+id/tv_mensagem_um"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cartao_protegido" />
+
+    <TextView
+        android:id="@+id/tv_cartao_protegido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/tv_seguro"
+        android:textColor="@color/rosa"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/tv_para_voce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/tv_planos_indicados"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_cartao_protegido"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem_dois" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_para_voce" />
+
+    <TextView
+        android:id="@+id/tv_plano_individual"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="@string/tv_plano_individual"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <TextView
+        android:id="@+id/tv_valor_cobertura1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/tv_valor_da_cobertura_individual"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_plano_individual" />
+
+    <TextView
+        android:id="@+id/tv_valor_mensal_individual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/tv_valor_numerico_cobertura"
+        android:textColor="@color/rosa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_valor_cobertura1"
+        app:layout_constraintStart_toEndOf="@+id/tv_valor_cobertura1"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_cobertura1" />
+
+    <TextView
+        android:id="@+id/tv_valor_mensal_seguro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/tv_valor_do_seguro_individual"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_cobertura1" />
+
+    <TextView
+        android:id="@+id/tv_valor_cobertura_individual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/tv_valor_numerico_seguro_individual"
+        android:textColor="@color/rosa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_valor_mensal_seguro1"
+        app:layout_constraintStart_toStartOf="@+id/tv_valor_mensal_individual"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_mensal_seguro1" />
+
+
+    <CheckBox
+        android:id="@+id/cb_individual"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_valor_cobertura1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_plano_individual" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_valor_cobertura_individual" />
+
+    <TextView
+        android:id="@+id/tv_plano_para_dois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="@string/tv_plano_duas_pessoas"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+    <TextView
+        android:id="@+id/tv_valor_cobertura2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/tv_valor_da_cobertura_duas_pessoas"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_plano_para_dois" />
+
+    <TextView
+        android:id="@+id/tv_valor_para_dois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/tv_valor_numerico_cobertura_dois"
+        android:textColor="@color/rosa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_valor_cobertura2"
+        app:layout_constraintStart_toEndOf="@+id/tv_valor_cobertura2"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_cobertura2" />
+
+    <TextView
+        android:id="@+id/tv_valor_mensal_seguro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/tv_valor_seguro_duas_pessoas"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_cobertura2" />
+
+    <TextView
+        android:id="@+id/tv_valor_mensal_para_dois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/tv_valor_numerico_seguro_duas_pessoas"
+        android:textColor="@color/rosa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_valor_mensal_seguro2"
+        app:layout_constraintStart_toStartOf="@+id/tv_valor_para_dois"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_cobertura2" />
+
+    <CheckBox
+        android:id="@+id/cb_pessoas"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_plano_para_dois"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_plano_para_dois" />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_mensal_seguro2" />
+
+    <TextView
+        android:id="@+id/tv_plano_familia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="@string/tv_plano_familia"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_3" />
+
+    <TextView
+        android:id="@+id/tv_valor_cobertura3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/tv_valor_da_cobertura_familia"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_plano_familia" />
+
+    <TextView
+        android:id="@+id/tv_valor_para_familia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/tv_valor_numerico_cobertura_familia"
+        android:textColor="@color/rosa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_valor_cobertura3"
+        app:layout_constraintStart_toEndOf="@+id/tv_valor_cobertura3"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_cobertura3" />
+
+    <TextView
+        android:id="@+id/tv_valor_mensal_seguro3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/tv_valor_seguro_familia"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_cobertura3" />
+
+    <TextView
+        android:id="@+id/tv_valor_mensal_para_familia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/tv_valor_numerico_seguro_familia"
+        android:textColor="@color/rosa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_valor_mensal_seguro3"
+        app:layout_constraintStart_toStartOf="@+id/tv_valor_para_familia"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_cobertura3" />
+
+    <CheckBox
+        android:id="@+id/cb_familia"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_plano_familia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_plano_familia" />
+
+    <Button
+        android:id="@+id/btn_contratar_seguro_vida"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_buttom"
+        android:fontFamily="@font/robotomedium"
+        android:text="@string/btn_contratar"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_mensal_seguro3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

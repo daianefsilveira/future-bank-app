@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contas.ContaCorrenteActivity">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_clear_cc"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <ImageView
+        android:id="@+id/ic_conta_corrente_"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_conta_corrente_branco"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sua_conta_corrente_head"
+        app:layout_constraintEnd_toStartOf="@+id/tv_sua_conta_corrente_head"
+        app:layout_constraintTop_toTopOf="@+id/tv_sua_conta_corrente_head" />
+
+    <TextView
+        android:id="@+id/tv_sua_conta_corrente_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Sua Conta Corrente"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_clear_cc"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/ic_clear_cc" />
+
+    <TextView
+        android:id="@+id/tv_valor_em_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Valor em Conta"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/tv_saldo_disponivel_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/rosa2"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_em_conta" />
+
+    <View
+        android:id="@+id/line_01"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_saldo_disponivel_cc"/>
+
+
+    <ImageView
+        android:id="@+id/iv_conta_poupanca"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/cobrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_01" />
+
+    <TextView
+        android:id="@+id/tv_valor_guardado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Conta Poupança"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_conta_poupanca"
+        app:layout_constraintTop_toTopOf="@+id/iv_conta_poupanca" />
+
+    <TextView
+        android:id="@+id/tv_get_valor_guardado_corrente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_conta_poupanca"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_guardado" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_conta_poupanca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_conta_poupanca" />
+
+
+    <!--   resgatar-->
+
+    <View
+        android:id="@+id/line_02"
+        android:layout_width="match_parent"
+        android:layout_marginTop="17dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_get_valor_guardado_corrente"/>
+
+    <ImageView
+        android:id="@+id/iv_resgatar_cc"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_resgatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_02" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_resgatar_cc"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_resgatar_cc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_resgatar_cc" />
+
+    <TextView
+        android:id="@+id/tv_resgatar_title_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Resgatar"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_resgatar_cc"
+        app:layout_constraintStart_toEndOf="@+id/iv_resgatar_cc"
+        app:layout_constraintTop_toTopOf="@+id/iv_resgatar_cc" />
+
+    <TextView
+        android:id="@+id/tv_resgatar_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Transferir da poupança para corrente"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_resgatar_cc"
+        app:layout_constraintTop_toBottomOf="@+id/iv_resgatar_cc" />
+
+
+<!--       Aplicar-->
+
+    <View
+        android:id="@+id/line_03"
+        android:layout_width="match_parent"
+        android:layout_marginTop="17dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resgatar_cc"/>
+
+    <ImageView
+        android:id="@+id/iv_aplicar_cc"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_aplicar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_03" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_aplicar_cc"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_aplicar_cc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_aplicar_cc" />
+
+    <TextView
+        android:id="@+id/tv_aplicar_title_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Aplicar"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_aplicar_cc"
+        app:layout_constraintStart_toEndOf="@+id/iv_aplicar_cc"
+        app:layout_constraintTop_toTopOf="@+id/iv_aplicar_cc" />
+
+    <TextView
+        android:id="@+id/tv_aplicar_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Transferir da corrente para poupança"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_aplicar_cc"
+        app:layout_constraintTop_toBottomOf="@+id/iv_aplicar_cc" />
+
+    <View
+        android:id="@+id/line_04"
+        android:layout_width="match_parent"
+        android:layout_marginTop="17dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aplicar_cc"/>
+
+
+    <TextView
+        android:id="@+id/tv_extrato_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Extrato"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/line_04"
+        app:layout_constraintStart_toEndOf="@+id/iv_aplicar_cc"/>
+
+    <!--Extrato Recycler-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_extrato_cc" />
+
+
+    <!--<View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_get_valor_guardado_corrente" />
+
+    <TextView
+        android:id="@+id/tv_valor_recebido1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Valor recebido"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money_verde"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <TextView
+        android:id="@+id/tv_data_recebimento1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="02/06/2022"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money_verde"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_recebido1" />
+
+    <TextView
+        android:id="@+id/tv_get_recebido1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="R$500,00"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_data_recebimento1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_recebido1" />
+
+    <ImageView
+        android:id="@+id/iv_money_verde"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/line_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1"
+        app:srcCompat="@drawable/ic_money_verde" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_recebimento1"/>
+
+    <TextView
+        android:id="@+id/tv_valor_enviado1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Valor enviado"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money_vermelho"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+    <TextView
+        android:id="@+id/tv_data_recebido2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="02/06/2022"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money_vermelho"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_enviado1" />
+
+    <TextView
+        android:id="@+id/tv_get_enviado2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="R$200,00"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_data_recebido2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_enviado1" />
+
+    <ImageView
+        android:id="@+id/iv_money_vermelho"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/line_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2"
+        app:srcCompat="@drawable/ic__money_vermelho" />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_recebido2" />
+
+    <TextView
+        android:id="@+id/tv_compra1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Compra Efetuada"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money_vermelho2"
+        app:layout_constraintTop_toBottomOf="@+id/line_3" />
+
+    <TextView
+        android:id="@+id/tv_data_enviado1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="02/06/2022"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money_vermelho2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_compra1" />
+
+    <TextView
+        android:id="@+id/tv_get_enviado1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="R$49,00"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_data_enviado1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_compra1" />
+
+    <ImageView
+        android:id="@+id/iv_money_vermelho2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/line_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_3"
+        app:srcCompat="@drawable/ic__money_vermelho" />
+
+    <View
+        android:id="@+id/line_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_enviado1" />
+
+    <TextView
+        android:id="@+id/tv_valor_recebido2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Valor recebido"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money_verde2"
+        app:layout_constraintTop_toBottomOf="@+id/line_4" />
+
+    <TextView
+        android:id="@+id/tv_data_recebimento2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="02/06/2022"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money_verde2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_recebido2" />
+
+    <TextView
+        android:id="@+id/tv_get_recebido2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="R$500,00"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_data_recebimento2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_recebido2" />
+
+    <ImageView
+        android:id="@+id/iv_money_verde2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_data_recebimento2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_recebido2"
+        app:srcCompat="@drawable/ic_money_verde" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

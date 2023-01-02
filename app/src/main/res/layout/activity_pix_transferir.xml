@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transacoes.PixTransferirActivity">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_clear"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <ImageView
+        android:id="@+id/iv_transferir_pix"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/icon_transferir_rosa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+
+    <TextView
+        android:id="@+id/tv_transferir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="@string/txt_transferir"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_transferir_pix"
+        app:layout_constraintStart_toEndOf="@+id/iv_transferir_pix"
+        app:layout_constraintTop_toTopOf="@+id/iv_transferir_pix" />
+
+    <TextView
+        android:id="@+id/tv_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/txt_descricao"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@+id/iv_transferir_pix"
+        app:layout_constraintTop_toBottomOf="@+id/tv_transferir" />
+
+    <TextView
+        android:id="@+id/tv_saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Saldo disponivel em conta "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_descricao"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descricao" />
+
+    <!--<com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/edt_valor_pix"
+        style="@style/Edit_Text_Login"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/cifrao"
+        android:gravity="end"
+        app:mask="  ,  "
+        app:maskCharacter=" "
+        app:maskStyle="completable"
+        android:hint="0,00"
+        android:inputType="numberDecimal"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_saldo"/>-->
+
+    <EditText
+        android:id="@+id/edt_valor_pix"
+        style="@style/Edit_Text_Login"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/cifrao"
+        android:fontFamily="@font/robotolight"
+        android:gravity="end"
+        android:hint="0,00"
+        android:inputType="text"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_saldo" />
+
+    <EditText
+        android:id="@+id/edt_chave_pix"
+        style="@style/Edit_Text_Login"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Informe a chave Pix"
+        android:textColorHint="@color/rosa"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/edt_valor_pix"
+        app:layout_constraintStart_toStartOf="@+id/edt_valor_pix"
+        app:layout_constraintTop_toBottomOf="@+id/edt_valor_pix" />
+
+    <TextView
+        android:id="@+id/tv_pagar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Transferir para uma conta"
+        android:textColor="@color/rosa"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_chave_pix"
+        app:layout_constraintTop_toBottomOf="@+id/edt_chave_pix" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_buttom"
+        android:text="Transferir para esta chave Pix"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagar" />
+
+    <TextView
+        android:id="@+id/tv_saldo_disponivel_rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="R$"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_saldo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_saldo_disponivel_pix"
+        app:layout_constraintTop_toTopOf="@+id/tv_saldo" />
+
+    <TextView
+        android:id="@+id/tv_saldo_disponivel_pix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="5.000,00"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_saldo"
+        app:layout_constraintStart_toEndOf="@+id/tv_saldo"
+        app:layout_constraintTop_toTopOf="@+id/tv_saldo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

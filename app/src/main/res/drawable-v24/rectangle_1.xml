@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- background do topo da home -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="243dp"
+    android:height="78dp"
+    android:viewportWidth="243"
+    android:viewportHeight="78">
+
+        <group>
+
+            <clip-path
+                android:pathData="M0 0H243V78H0V0Z"
+                />
+
+            <path
+                android:pathData="M0 0V78H243V0"
+                android:fillColor="#F2295F"
+                />
+
+        </group>
+
+    </vector>
+

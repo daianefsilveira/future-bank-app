@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "54737064776",
+    "project_id": "futurebank-grupo1",
+    "storage_bucket": "futurebank-grupo1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54737064776:android:b4b8558e9f48458d17197d",
+        "android_client_info": {
+          "package_name": "com.example.futurebankgrupo1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54737064776-avuet6lekehu7mgjuhcgtb12uc9ljutk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHjrFj0rR0g6fzcGOWgWxkCPoXkoIimhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54737064776-avuet6lekehu7mgjuhcgtb12uc9ljutk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

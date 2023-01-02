@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contas.TiposContasActivity">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_clear"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <ImageView
+        android:id="@+id/ic_config_user_up"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_contas_branco"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_suas_contas"
+        app:layout_constraintEnd_toStartOf="@+id/tv_suas_contas"
+        app:layout_constraintTop_toTopOf="@+id/tv_suas_contas" />
+
+    <TextView
+        android:id="@+id/tv_suas_contas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Suas Contas"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_clear"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/ic_clear" />
+
+    <ImageView
+        android:id="@+id/iv_pix_black"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_conta_corrente_rosa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"/>
+
+    <TextView
+        android:id="@+id/tv_conta_corrente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Conta Corrente"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pix_black"
+        app:layout_constraintStart_toEndOf="@+id/iv_pix_black"
+        app:layout_constraintTop_toTopOf="@id/iv_pix_black" />
+
+
+    <TextView
+        android:id="@+id/tv_saldo_contas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Saldo disponível"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_pix_black"
+        app:layout_constraintTop_toBottomOf="@+id/tv_conta_corrente" />
+
+    <TextView
+        android:id="@+id/tv_get_saldo_contas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/robotomedium"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_saldo_contas"
+        app:layout_constraintStart_toEndOf="@+id/tv_saldo_contas"
+        app:layout_constraintTop_toTopOf="@+id/tv_saldo_contas" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pix_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_pix_black" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_saldo_contas"/>
+
+    <ImageView
+        android:id="@+id/iv_conta_poupanca"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_conta_poupanca_rosa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_conta_poupanca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_conta_poupanca" />
+
+    <TextView
+        android:id="@+id/tv_conta_poupanca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Conta Poupança"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_conta_poupanca"
+        app:layout_constraintStart_toEndOf="@+id/iv_conta_poupanca"
+        app:layout_constraintTop_toTopOf="@+id/iv_conta_poupanca" />
+
+    <TextView
+        android:id="@+id/tv_guardado_conta_poupanca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Valor guardado"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_conta_poupanca"
+        app:layout_constraintTop_toBottomOf="@+id/tv_conta_poupanca" />
+
+    <TextView
+        android:id="@+id/tv_get_valor_guardado_contas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/robotomedium"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_guardado_conta_poupanca"
+        app:layout_constraintStart_toEndOf="@+id/tv_guardado_conta_poupanca"
+        app:layout_constraintTop_toBottomOf="@+id/tv_conta_poupanca" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_guardado_conta_poupanca"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

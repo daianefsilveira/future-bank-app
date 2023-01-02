@@ -1,0 +1,138 @@
+<resources>
+    <string name="app_name">FutureBANK</string>
+    <string name="pagar_com_pix">Pagar com Pix</string>
+    <string name="pagar_com_chave_pix">Pagar com chave Pix</string>
+
+    // tela login
+    <string name="txt_acessar_a_conta">Acessar a conta</string>
+    <string name="txt_email_login">Email</string>
+    <string name="txt_senha_login">Senha</string>
+    <string name="txt_acessar">Acessar</string>
+    <string name="txt_nao_tem_conta">Não tem conta?!</string>
+    <string name="txt_crie_aqui">Crie aqui</string>
+    <string name="txt_esqueceu_a_senha">Esqueceu a senha?</string>
+    <string name="txt_clique_aqui">Clique aqui</string>
+
+    // tela cadastro
+    <string name="txt_abrir_uma_conta">Abrir uma conta</string>
+    <string name="txt_adicionar_biometria">Adicionar biometria</string>
+    <string name="txt_nome_completo">Nome completo</string>
+    <string name="txt_telefone">Telefone</string>
+    <string name="txt_cpf">CPF</string>
+    <string name="txt_nascimento">Data de Nascimento</string>
+    <string name="txt_endereco">Endereço</string>
+    <string name="txt_cep">CEP</string>
+    <string name="txt_numero">NÚMERO</string>
+    <string name="txt_logradouro">LOGRADOURO</string>
+    <string name="txt_bairro">BAIRRO</string>
+    <string name="txt_cidade">CIDADE</string>
+    <string name="txt_estado">ESTADO</string>
+    <string name="txt_pais">PAÍS</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_senha">Senha</string>
+    <string name="txt_criar">Criar</string>
+
+    // tela splash
+    <string name="txt_msg_inicial">FUTUREBANK O BANCO FEITO PARA QUEM PENSA NO FUTURO</string>
+    <string name="txt_future">Future</string>
+    <string name="txt_bank">BANK</string>
+    <string name="txt_apresentacao">O Banco feito para quem pensa no Futuro</string>
+    <string name="txt_apresentacao_pix">Aqui você pode pagar e receber, a qualquer \nhora do dia, de forma totalmente gratuita</string>
+
+    <string name="txt_pagar">Pagar</string>
+    <string name="txt_receber">Receber</string>
+    <string name="txt_transferir">\tTransferir</string>
+    <string name="txt_descricao">Informe o valor e para quem deseja transferir</string>
+    <string name="txt_saldo">Saldo disponível em conta R$ 5.000,00</string>
+    <string name="txt_area_pix">\tÁrea PIX</string>
+    <string name="txt_transferencia_pix">\tTransferência Pix</string>
+    <string name="txt_cod_barra">00020126330014BR.GOV.BCB.PIX01110616003293352040000\n5303986540530.005802BR5925Adalberto Ferreira 6009SAO\nPAULO61080540900062070503***63041F1E</string>
+
+    // tela seguro vida
+    <string name="tv_para_vc">Para Você</string>
+    <string name="tv_frase_header">Proteja você e sua Família \ncom o melhor seguro.</string>
+    <string name="tv_frase_garantia">Garantia de proteção em caso de imprevistos.</string>
+    <string name="tv_seguro">Seguro de Vida</string>
+    <string name="tv_planos_indicados">Planos mais Indicado Para Você</string>
+    <string name="tv_plano_individual">Plano Individual</string>
+    <string name="tv_valor_da_cobertura_individual">Valor da Cobertura</string>
+    <string name="tv_valor_numerico_cobertura">R$ 80.000,00</string>
+    <string name="tv_valor_do_seguro_individual">Valor do Seguro</string>
+    <string name="tv_valor_numerico_seguro_individual">R$ 37,90 / mês</string>
+    <string name="tv_plano_duas_pessoas">Plano Para 2 Pessoas</string>
+    <string name="tv_valor_da_cobertura_duas_pessoas">Valor da Cobertura</string>
+    <string name="tv_valor_numerico_cobertura_dois">R$ 100.000,00</string>
+    <string name="tv_valor_seguro_duas_pessoas">Valor do Seguro</string>
+    <string name="tv_valor_numerico_seguro_duas_pessoas">R$ 43,90 / mês</string>
+    <string name="tv_plano_familia">Plano Para a Família</string>
+    <string name="tv_valor_da_cobertura_familia">Valor da Cobertura</string>
+    <string name="tv_valor_numerico_cobertura_familia">R$ 150.000,00</string>
+    <string name="tv_valor_seguro_familia">Valor do Seguro</string>
+    <string name="tv_valor_numerico_seguro_familia">R$ 59,90 / mês</string>
+    <string name="btn_contratar">Contratar</string>
+
+    //tela seguro cartão
+    <string name="tv_frase_um_header">Não se preocupe</string>
+    <string name="tv_frase_dois_header">Proteja seu cartão com o\nmelhor seguro.</string>
+    <string name="tv_apresentacao_mais_protegido">Com ele você fica mais protegido em caso de \nperda, roubo, furto, saque ou compra sob ameaça \naté o limite contratado.</string>
+    <string name="tv_cartao_protegido">Cartão Bem Protegido</string>
+    <string name="tv_planos_indicados_seguro_cartao">Planos mais Indicado Para Você</string>
+    <string name="tv_plano_standard">Plano Standard</string>
+    <string name="tv_valor_standard">R$ 2,90/mês</string>
+    <string name="tv_plano_plus">Plano Plus</string>
+    <string name="tv_valor_plus">R$ 4,90/mês</string>
+    <string name="tv_plano_premium">Plano Premium</string>
+    <string name="tv_copia_e_cola">Copia e Cola</string>
+    <string name="tv_cod_pagamento">Insira o código de pagamento</string>
+    <string name="tv_cole_codigo">Cole o código aqui</string>
+    <string name="tv_valor_premium">R$ 7,30/mês</string>
+    <string name="btn_contratar_seguro_cartao">Contratar</string>
+
+    //tela área pix
+    <string name="tv_area_pix">Área Pix</string>
+    <string name="txt_transferir_pix">Transferir</string>
+    <string name="txt_copia_cola_pix">Copia e Cola</string>
+    <string name="future">Future</string>
+    <string name="bank">BANK</string>
+    <string name="todo">TODO</string>
+    <string name="informe_o_valor_que_deseja_guardar_na_poupan_a">Informe o valor que deseja guardar na poupança</string>
+    <string name="confirmar_recarga">Confirmar Recarga</string>
+    <string name="digite_sua_senha_para_confirmar_a_transa_o">Digite sua senha para confirmar a transação</string>
+    <string name="confirmar_transa_o">Confirmar Transação</string>
+    <string name="ou_utilize_o_leitor_de_biometria_do_seu_celular">Ou utilize o leitor de biometria do seu celular</string>
+
+    //spinner recarga
+
+    <string-array name="valor_array">
+        <item></item>
+        <item>10.00</item>
+        <item>15.00</item>
+        <item>20.00</item>
+        <item>25.00</item>
+        <item>35.00</item>
+        <item>40.00</item>
+        <item>50.00</item>
+        <item>60.00</item>
+    </string-array>
+
+    <string-array name="operadoras_array">
+        <item></item>
+        <item>Oi</item>
+        <item>Vivo</item>
+        <item>Tim</item>
+        <item>Claro</item>
+    </string-array>
+
+    <string-array name="pagamento_array">
+        <item></item>
+        <item>Débito</item>
+        <item>Crédito</item>
+    </string-array>
+
+    <string-array name="tipo_conta_array">
+        <item></item>
+        <item>Conta Corrente</item>
+        <item>Conta Poupança</item>
+    </string-array>
+
+</resources>

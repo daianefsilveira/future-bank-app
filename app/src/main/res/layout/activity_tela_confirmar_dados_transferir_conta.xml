@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+  <ImageView
+      android:id="@+id/header"
+      android:layout_width="match_parent"
+      android:layout_height="75dp"
+      android:background="@color/rosa"
+      android:scaleType="centerCrop"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/ic_back"
+      android:layout_width="35dp"
+      android:layout_height="35dp"
+      android:layout_marginStart="20dp"
+      android:clickable="true"
+      app:layout_constraintBottom_toBottomOf="@+id/header"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/header"
+      app:srcCompat="@drawable/ic_arrow_back" />
+
+  <TextView
+      android:id="@+id/tv_confirmar_dados_pix"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      android:fontFamily="@font/robotoregular"
+      android:text="Confirme os dados"
+      android:textColor="@color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/header" />
+
+  <TextView
+      android:id="@+id/tv_valor"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="4dp"
+      android:fontFamily="@font/robotoregular"
+      android:text=""
+      android:textColor="@color/rosa2"
+      android:textSize="28sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_confirmar_dados_pix" />
+
+  <TextView
+      android:id="@+id/tv_para"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20sp"
+      android:layout_marginTop="4dp"
+      android:fontFamily="@font/robotolight"
+      android:text="Para"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_valor" />
+
+  <TextView
+      android:id="@+id/tv_nome_recebedor"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="4dp"
+      android:fontFamily="@font/robotoregular"
+      android:text="JOÃO DA SILVA"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toEndOf="@+id/tv_para"
+      app:layout_constraintTop_toBottomOf="@+id/tv_valor" />
+
+
+  <View
+      android:id="@+id/line_1"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginTop="32dp"
+      android:background="@color/gray"
+      app:layout_constraintTop_toBottomOf="@+id/tv_nome_recebedor" />
+
+  <TextView
+      android:id="@+id/tv_agendado"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20sp"
+      android:layout_marginTop="16dp"
+      android:fontFamily="@font/robotolight"
+      android:text="Agendado para"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+  <TextView
+      android:id="@+id/tv_agora"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="@font/robotoregular"
+      android:text="Hoje"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_agendado" />
+
+  <TextView
+      android:id="@+id/tv_reagendar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="@font/robotoregular"
+      android:text="Reagendar"
+      android:textColor="@color/rosa2"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_agendado" />
+
+  <View
+      android:id="@+id/line_2"
+      android:layout_width="match_parent"
+      android:layout_marginTop="16dp"
+      android:layout_height="1dp"
+      android:background="@color/gray"
+      app:layout_constraintTop_toBottomOf="@+id/tv_agora"/>
+
+
+  <TextView
+      android:id="@+id/tv_tipo_tranf"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20sp"
+      android:layout_marginTop="16dp"
+      android:fontFamily="@font/robotolight"
+      android:text="Tipo de Transferência"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+  <TextView
+      android:id="@+id/tv_pix_tranf"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="@font/robotoregular"
+      android:text="TED"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_tipo_tranf" />
+
+  <View
+      android:id="@+id/line_3"
+      android:layout_width="match_parent"
+      android:layout_marginTop="16dp"
+      android:layout_height="1dp"
+      android:background="@color/gray"
+      app:layout_constraintTop_toBottomOf="@+id/tv_pix_tranf"/>
+
+
+  <TextView
+      android:id="@+id/tv_cpf"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="16dp"
+      android:fontFamily="@font/robotolight"
+      android:text="CPF"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/line_3" />
+
+  <TextView
+      android:id="@+id/tv_instituicao"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="@font/robotolight"
+      android:text="Instituição"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_cpf" />
+
+  <TextView
+      android:id="@+id/tv_agencia"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="@font/robotolight"
+      android:text="Agência"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_instituicao" />
+
+  <TextView
+      android:id="@+id/tv_conta_corrente"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="@font/robotolight"
+      android:text="Conta"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_agencia" />
+
+  <TextView
+      android:id="@+id/tv_get_cpf"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:fontFamily="@font/robotoregular"
+      android:text=""
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="@+id/tv_cpf"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/tv_cpf" />
+
+  <TextView
+      android:id="@+id/tv_get_instituicao"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:fontFamily="@font/robotoregular"
+      android:text=""
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="@+id/tv_instituicao"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/tv_instituicao" />
+
+  <TextView
+      android:id="@+id/tv_get_agencia"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:fontFamily="@font/robotoregular"
+      android:text=""
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="@+id/tv_agencia"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/tv_agencia" />
+
+  <TextView
+      android:id="@+id/tv_get_conta"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:fontFamily="@font/robotoregular"
+      android:text=""
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="@+id/tv_conta_corrente"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/tv_conta_corrente" />
+
+  <TextView
+      android:id="@+id/tv_tipo_de_conta"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="@font/robotolight"
+      android:text="Tipo de Conta"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_conta_corrente" />
+
+  <TextView
+      android:id="@+id/tv_get_tipo_conta"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:fontFamily="@font/robotoregular"
+      android:text=""
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="@+id/tv_tipo_de_conta"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_conta_corrente" />
+
+  <Button
+      android:id="@+id/btn_confirmar_transferencia"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginBottom="50dp"
+      android:background="@drawable/custom_buttom"
+      android:fontFamily="@font/robotomedium"
+      android:text="Confirmar Transferência"
+      android:textAllCaps="false"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

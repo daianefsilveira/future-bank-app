@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transacoes.TelaPagarComPix">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_clear_pagar_com_pix"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <TextView
+        android:id="@+id/titulo_pagar_com_pix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/pagar_com_pix"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/header" />
+
+    <ImageView
+        android:id="@+id/iv_key"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_key"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"/>
+
+    <TextView
+        android:id="@+id/tv_pagar_com_chave_pix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/pagar_com_chave_pix"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_key"
+        app:layout_constraintStart_toEndOf="@+id/iv_key"
+        app:layout_constraintTop_toTopOf="@id/iv_key" />
+
+
+    <TextView
+        android:id="@+id/tv_solicitar_chave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Solicite a chave para \nquem deseja pagar"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_key"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagar_com_chave_pix" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_pagar_com_chave_pix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_pagar_com_chave_pix"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_solicitar_chave"/>
+
+    <ImageView
+        android:id="@+id/iv_copy"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_copy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_pagar_fatura_cartao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_pagar_fatura_cartao" />
+
+    <TextView
+        android:id="@+id/tv_pagar_fatura_cartao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Pix Copia e Cola"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_copy"
+        app:layout_constraintStart_toEndOf="@+id/iv_copy"
+        app:layout_constraintTop_toTopOf="@+id/iv_copy" />
+
+    <TextView
+        android:id="@+id/tv_gerar_boleto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Inserir o código copiado"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_copy"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagar_fatura_cartao" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gerar_boleto"/>
+
+    <ImageView
+        android:id="@+id/iv_qrcode_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/qr_code_preto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward_qrcode"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_pagar_qrcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_pagar_qrcode" />
+
+    <TextView
+        android:id="@+id/tv_pagar_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Pagar com QR Code"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_qrcode_icon"
+        app:layout_constraintStart_toEndOf="@+id/iv_qrcode_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_qrcode_icon" />
+
+    <TextView
+        android:id="@+id/tv_ler_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Ler QR Code para pagar"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_qrcode_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagar_qrcode" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

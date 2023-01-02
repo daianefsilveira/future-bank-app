@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/constraint_geral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash.SubSplashActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".usuario.LoginActivity">
+
+        <TextView
+            android:id="@+id/tv_future"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotobolditalic"
+            android:gravity="center"
+            android:text="@string/future"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/logo"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bank"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.488" />
+
+        <TextView
+            android:id="@+id/tv_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotobolditalic"
+            android:gravity="center"
+            android:text="@string/bank"
+            android:textColor="@color/rosa"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_future"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_future" />
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/logo_t3"
+            app:layout_constraintStart_toStartOf="@+id/tv_bank"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tv_acesso"
+            style="@style/Text_View_Login_e_Cadastro"
+            android:layout_marginTop="32dp"
+            android:text="@string/txt_acessar_a_conta"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <EditText
+            android:id="@+id/edt_email_login"
+            style="@style/Edit_Text_Login"
+            android:layout_marginTop="32dp"
+            android:drawableEnd="@drawable/user"
+            android:hint="@string/txt_email_login"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/rosa"
+            app:layout_constraintEnd_toEndOf="@+id/tv_acesso"
+            app:layout_constraintStart_toStartOf="@+id/tv_acesso"
+            app:layout_constraintTop_toBottomOf="@+id/tv_acesso"
+            android:autofillHints="" />
+
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_senha_login"
+            style="@style/Edit_Text_Login"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/eyes"
+            android:hint="@string/txt_senha_login"
+            android:inputType="textPassword"
+            android:maxLength="6"
+            android:textColorHint="@color/rosa"
+            app:layout_constraintEnd_toEndOf="@+id/edt_email_login"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edt_email_login"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email_login"
+            android:autofillHints=""
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/rosa">
+
+
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <EditText
+            android:id="@+id/edt_senha_login"
+            style="@style/Edit_Text_Login"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/eyes"
+            android:hint="@string/txt_senha_login"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:textColorHint="@color/rosa"
+            app:layout_constraintEnd_toEndOf="@+id/edt_email_login"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edt_email_login"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email_login"
+            android:autofillHints="" />
+
+        <ImageView
+            android:id="@+id/iv_biometria"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/fingerprint"
+            app:layout_constraintEnd_toEndOf="@+id/edt_senha_login"
+            app:layout_constraintStart_toStartOf="@+id/edt_senha_login"
+            app:layout_constraintTop_toBottomOf="@+id/edt_senha_login"
+            android:contentDescription="@string/todo" />
+
+        <Button
+            android:id="@+id/btn_acessar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_buttom"
+            android:text="Entrar"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/iv_biometria"
+            app:layout_constraintStart_toStartOf="@+id/iv_biometria"
+            app:layout_constraintTop_toBottomOf="@+id/iv_biometria" />
+
+        <TextView
+            android:id="@+id/msg_sem_conta"
+            style="@style/Text_View_Login_e_Cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/txt_nao_tem_conta"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/tv_criar_conta"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_acessar" />
+
+        <TextView
+            android:id="@+id/tv_criar_conta"
+            style="@style/Text_View_Login_e_Cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txt_crie_aqui"
+            android:textColor="@color/rosa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/msg_sem_conta"
+            app:layout_constraintTop_toBottomOf="@+id/btn_acessar" />
+
+        <TextView
+            android:id="@+id/msg_esqueceu_senha"
+            style="@style/Text_View_Login_e_Cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/txt_esqueceu_a_senha"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/tv_esqueceu_senha"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/msg_sem_conta" />
+
+        <TextView
+            android:id="@+id/tv_esqueceu_senha"
+            style="@style/Text_View_Login_e_Cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txt_clique_aqui"
+            android:textColor="@color/rosa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/msg_esqueceu_senha"
+            app:layout_constraintTop_toBottomOf="@+id/msg_sem_conta" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_login"
+            android:layout_width="2dp"
+            android:layout_height="2dp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/rosa"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

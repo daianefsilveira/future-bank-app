@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transacoes.PixComprovanteActivity">
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Data"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tv_transferencia_pix"
+        app:layout_constraintTop_toBottomOf="@+id/tv_transferencia_pix" />
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_future"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotobolditalic"
+        android:gravity="center"
+        android:text="FutureBANK"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.488" />
+
+    <ImageView
+        android:id="@+id/ic_clear"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_clear" />
+
+
+    <TextView
+        android:id="@+id/tv_transferencia_pix"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:drawableStart="@drawable/group_52"
+        android:fontFamily="@font/robotomedium"
+        android:text="@string/txt_transferencia_pix"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/tv_data_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="08dp"
+        android:fontFamily="@font/robotolight"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_data"
+        app:layout_constraintTop_toBottomOf="@+id/tv_transferencia_pix" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_hora" />
+
+    <!-- Text Views lado esquerdo recebedor -->
+
+    <TextView
+        android:id="@+id/tv_para_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Para"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+    <TextView
+        android:id="@+id/tv_cpf_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="CPF"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_para_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_para_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_instituicao_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Instituição"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_cpf_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cpf_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_ag_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Agência"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_instituicao_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instituicao_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_cc_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Conta Corrente"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_ag_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ag_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_tipo_de_chave_pix_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Tipo de chave Pix"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_cc_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cc_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_valor_transferencia"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Valor da Transferência"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_tipo_de_chave_pix_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tipo_de_chave_pix_recebedor" />
+
+    <!-- Text Views lado direito recebedor -->
+
+    <TextView
+        android:id="@+id/tv_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="JOÃO DA SILVA"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+
+    <TextView
+        android:id="@+id/tv_num_cpf_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="***.654.321-**"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_nome_instituicao_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="FutureBank"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_cpf_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num_cpf_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_num_ag_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="0001"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nome_instituicao_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome_instituicao_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_num_cc_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="1234567-8"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_ag_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num_ag_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_chave_pix_recebedor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_cc_recebedor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num_cc_recebedor" />
+
+    <TextView
+        android:id="@+id/tv_get_valor_transferido"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_valor_transferencia"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_cc_recebedor"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor_transferencia" />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_transferencia" />
+
+    <!-- Text Views lado esquerdo pagador -->
+
+    <TextView
+        android:id="@+id/tv_de_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="De"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_3" />
+
+    <TextView
+        android:id="@+id/tv_cpf_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="CPF"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_de_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_de_pagador" />
+
+    <TextView
+        android:id="@+id/tv_instituicao_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Instituição"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_cpf_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cpf_pagador" />
+
+    <TextView
+        android:id="@+id/tv_ag_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Agência"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_instituicao_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instituicao_pagador" />
+
+    <TextView
+        android:id="@+id/tv_cc_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Conta Corrente"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_ag_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ag_pagador" />
+
+    <TextView
+        android:id="@+id/tv_id_transacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="ID Transação"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_cc_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cc_pagador" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Mensagem"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_cc_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_id_transacao" />
+
+    <!-- Text Views lado direito pagador -->
+
+    <TextView
+        android:id="@+id/tv_tipo_pgto"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_msg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_msg" />
+
+    <TextView
+        android:id="@+id/tv_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_3" />
+
+    <TextView
+        android:id="@+id/tv_num_cpf_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagador" />
+
+    <TextView
+        android:id="@+id/tv_nome_instituicao_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="FutureBank"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_cpf_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num_cpf_pagador" />
+
+    <TextView
+        android:id="@+id/tv_num_ag_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="0001"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nome_instituicao_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome_instituicao_pagador" />
+
+    <TextView
+        android:id="@+id/tv_num_cc_pagador"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="8765432-1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_ag_pagador"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num_ag_pagador" />
+
+    <TextView
+        android:id="@+id/tv_get_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_id_transacao"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_cc_pagador"
+        app:layout_constraintTop_toTopOf="@+id/tv_id_transacao" />
+
+
+    <Button
+        android:id="@+id/btn_comprovante_pix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/custom_buttom"
+        android:text="Salvar Comprovante em PDF"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

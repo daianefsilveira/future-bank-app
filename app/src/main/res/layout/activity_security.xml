@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuario.Security">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <ImageView
+        android:id="@+id/ic_config_user_up"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_security_branco"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_security"
+        app:layout_constraintEnd_toStartOf="@+id/tv_security"
+        app:layout_constraintTop_toTopOf="@+id/tv_security" />
+
+    <TextView
+        android:id="@+id/tv_security"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Segurança"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_back"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/ic_back" />
+
+    <TextView
+        android:id="@+id/tv_biometria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Biometria"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <ImageView
+        android:id="@+id/iv_biometria"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/fingerprint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_biometria" />
+
+
+    <TextView
+        android:id="@+id/tv_habilitar_bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Habilitar Biometria"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_biometria"
+        app:layout_constraintStart_toEndOf="@+id/iv_biometria"
+        app:layout_constraintTop_toTopOf="@id/iv_biometria"
+        app:layout_constraintVertical_bias="0.363" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/iv_biometria"/>
+
+    <Switch
+        android:id="@+id/switch_biometria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_habilitar_bio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_habilitar_bio" />
+
+
+    <TextView
+        android:id="@+id/tv_Alterar_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Alterar Senha"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Alterar_senha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_Alterar_senha" />
+
+    <ImageView
+        android:id="@+id/iv_lock"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_locked"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_resetar_senha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_resetar_senha" />
+
+    <TextView
+        android:id="@+id/tv_resetar_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Iremos redirecionar você para a tela \nde alteração de senha e será necessário \nrealizar novo login, após redefinição."
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/iv_lock"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Alterar_senha" />
+
+    <!--<EditText
+        android:id="@+id/edt_senha_atual"
+        style="@style/Edit_Text_Login"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:inputType="numberPassword"
+        android:hint="Digite sua senha atual"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:drawableStart="@drawable/ic_lock_senha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Alterar_senha" />
+
+    <EditText
+        android:id="@+id/edt_senha_nova1"
+        style="@style/Edit_Text_Login"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:drawableStart="@drawable/ic_lock_senha"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:hint="Digite a nova senha"
+        android:inputType="numberPassword"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_senha_atual" />
+
+    <EditText
+        android:id="@+id/edt_senha_nova2"
+        style="@style/Edit_Text_Login"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_lock_senha"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:hint="Digite a nova senha"
+        android:inputType="numberPassword"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_senha_nova1" />
+
+    <Button
+        android:id="@+id/btn_salvar_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_buttom"
+        android:text="Salvar Alterações"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

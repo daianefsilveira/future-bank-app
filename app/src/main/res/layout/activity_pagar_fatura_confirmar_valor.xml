@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fatura.pagarfatura.PagarFaturaConfirmarValor">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pagar_fatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:text="Pagar Fatura"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/header" />
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/tv_pagar_valor_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Pagar valor total"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/tv_get_valor_fatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/rosa2"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagar_valor_total" />
+
+    <TextView
+        android:id="@+id/tv_saldo_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Saldo disponível em conta"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_get_valor_fatura" />
+
+    <TextView
+        android:id="@+id/tv_get_saldo_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_saldo_conta"
+        app:layout_constraintTop_toBottomOf="@+id/tv_get_valor_fatura" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_outro_valor"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="48dp"-->
+<!--        android:textSize="14sp"-->
+<!--        android:fontFamily="@font/robotolight"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:text="Se deseja pagar outro valor, digite-o abaixo"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_saldo_conta" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_valor_pix"-->
+<!--        style="@style/Edit_Text_Login"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:drawableStart="@drawable/cifrao"-->
+<!--        android:fontFamily="@font/robotolight"-->
+<!--        android:gravity="end"-->
+<!--        android:hint="0,00"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        android:textSize="35dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_outro_valor" />-->
+
+    <!--<View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_saldo_conta" />
+
+    <TextView
+        android:id="@+id/tv_pagamento_agendado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Agendado para"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <TextView
+        android:id="@+id/tv_reagendar_fatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Reagendar"
+        android:textColor="@color/rosa2"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toEndOf="@+id/tv_pagamento_agendado"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagamento_agendado" />-->
+
+    <!--    <TextView-->
+<!--        android:id="@+id/tv_reagendar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:fontFamily="@font/robotoregular"-->
+<!--        android:text="Reagendar"-->
+<!--        android:textColor="@color/rosa2"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_pagamento_agendado" />-->
+
+    <!--<View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/text_data"
+        tools:ignore="MissingConstraints" />-->
+
+    <Button
+        android:id="@+id/btn_pagar_fatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Pagar sua Fatura"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:background="@drawable/custom_buttom"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!--<TextView
+        android:id="@+id/text_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Data"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_pagamento_agendado"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagamento_agendado" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

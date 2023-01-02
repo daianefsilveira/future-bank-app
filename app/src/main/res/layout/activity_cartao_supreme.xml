@@ -1,0 +1,270 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/cabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="187dp"
+        android:layout_height="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_t1_branco"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="8dp"
+        android:text="MEUS CARTÕES"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/cadeado"
+        android:layout_width="78dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ajusteLimite"
+        app:layout_constraintTop_toBottomOf="@+id/saldoRestante"
+        app:srcCompat="@drawable/cadeado"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/chave"
+        android:layout_width="67dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/papelFatura"
+        app:layout_constraintTop_toBottomOf="@+id/textAjustarLimite"
+        app:srcCompat="@drawable/chave"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/papelFatura"
+        android:layout_width="70dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPagarFatura"
+        app:srcCompat="@drawable/papel"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/ajusteLimite"
+        android:layout_width="67dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@+id/codigoBarras"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresso"
+        app:srcCompat="@drawable/remove"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/codigoBarras"
+        android:layout_width="72dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saldoUtilizado"
+        app:srcCompat="@drawable/codigo"
+        tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/barraProgresso"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="348dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecalho"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/limite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Limite "
+        android:textColor="#776F6F"
+        app:layout_constraintBottom_toTopOf="@+id/barraProgresso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecalho"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/saldoRestante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="80dp"
+        android:text="Restante"
+        android:textColor="#776F6F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/valor2"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresso"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/saldoUtilizado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="ultilizado"
+        android:textColor="#776F6F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresso"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/valor3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="R$0,00"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saldoRestante"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresso"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/valor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="R$0,00"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/saldoUtilizado"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresso"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="R$ 3,000"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/barraProgresso"
+        app:layout_constraintStart_toEndOf="@+id/limite"
+        app:layout_constraintTop_toBottomOf="@+id/cabecalho"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textPagarFatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="60dp"
+        android:text="Pagar fatura"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textAjustarLimite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codigoBarras"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textAjustarLimite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Ajustar limite"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textBloquearCartao"
+        app:layout_constraintTop_toBottomOf="@+id/ajusteLimite"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textBloquearCartao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="Bloquear cartão"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadeado"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textFatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Faturas"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/papelFatura"
+        tools:ignore="MissingConstraints"
+        tools:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textRedefSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="150dp"
+        android:text="Redefinir senha"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chave"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/cartao_supreme"
+        android:layout_width="370dp"
+        android:layout_height="183dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/supreme" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cabecalho"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartao_supreme"
+        app:srcCompat="@drawable/ic_more_horiz" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

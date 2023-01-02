@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <View
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_eye_home"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/icon_eye_enabled"
+        app:layout_constraintBottom_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="@id/header"
+        app:layout_constraintTop_toTopOf="@id/header" />
+
+    <ImageView
+        android:id="@+id/icon_logo_home"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_logo_home"
+        app:layout_constraintBottom_toBottomOf="@id/header"
+        app:layout_constraintEnd_toEndOf="@id/header"
+        app:layout_constraintStart_toStartOf="@id/header"
+        app:layout_constraintTop_toTopOf="@id/header" />
+
+    <ImageView
+        android:id="@+id/ic_menu_home"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/icon_menu_home"
+        app:layout_constraintBottom_toBottomOf="@id/header"
+        app:layout_constraintEnd_toEndOf="@id/header"
+        app:layout_constraintTop_toTopOf="@id/header" />
+
+    <TextView
+        android:id="@+id/tv_ola_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotoregular"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <TextView
+        android:id="@+id/tv_conta_corrente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Conta Corrente"
+        android:fontFamily="@font/robotomedium"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ola_cliente" />
+
+    <TextView
+        android:id="@+id/tv_saldo_disponivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/robotomedium"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_conta_corrente"
+        app:layout_constraintEnd_toStartOf="@id/iv_arrow_forward1"
+        app:layout_constraintTop_toTopOf="@+id/tv_conta_corrente" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward1"
+        android:layout_width="15dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_saldo_disponivel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_saldo_disponivel" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_pix"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/backgound_shape_rectangule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_conta_corrente">
+
+        <ImageView
+            android:id="@+id/iv_pix"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_pix_rosa"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pix"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pix"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/robotoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_pix" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_pagar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/backgound_shape_rectangule"
+        app:layout_constraintEnd_toStartOf="@+id/constraint_transferir"
+        app:layout_constraintStart_toEndOf="@id/constraint_pix"
+        app:layout_constraintTop_toBottomOf="@id/tv_conta_corrente">
+
+        <ImageView
+            android:id="@+id/iv_pagar"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_pagar_rosa"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pagar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pagar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pagar"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_pagar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_transferir"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/backgound_shape_rectangule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/constraint_pagar"
+        app:layout_constraintTop_toBottomOf="@id/tv_conta_corrente">
+
+        <ImageView
+            android:id="@+id/iv_transferir_home"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_transferir_rosa"
+            app:layout_constraintBottom_toTopOf="@+id/tv_transferir_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_transferir_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transferir"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_transferir_home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_cobrar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backgound_shape_rectangule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_pix">
+
+        <ImageView
+            android:id="@+id/iv_cobrar_home"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_receber_rosa"
+            app:layout_constraintBottom_toTopOf="@+id/tv_Cobrar_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Cobrar_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cobrar"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cobrar_home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_cartoes"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backgound_shape_rectangule"
+        app:layout_constraintEnd_toStartOf="@id/constraint_contas"
+        app:layout_constraintStart_toEndOf="@id/constraint_cobrar"
+        app:layout_constraintTop_toBottomOf="@id/constraint_pagar">
+
+        <ImageView
+            android:id="@+id/iv_cartoes_home"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_cartoes_rosa"
+            app:layout_constraintBottom_toTopOf="@+id/tv_cartoes_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cartoes_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cartões"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cartoes_home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_contas"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backgound_shape_rectangule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/constraint_cartoes"
+        app:layout_constraintTop_toBottomOf="@id/constraint_transferir">
+
+        <ImageView
+            android:id="@+id/iv_contas"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_contas_rosa"
+            app:layout_constraintBottom_toTopOf="@+id/tv_contas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_contas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contas"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_contas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="#DFD8D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_cartoes"        />
+
+    <TextView
+        android:id="@+id/tv_cartao_credito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Cartão de Crédito"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:fontFamily="@font/robotomedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <TextView
+        android:id="@+id/tv_fatura_atual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Fatura atual"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_cartao_credito" />
+
+    <TextView
+        android:id="@+id/tv_get_valor_fatura_atual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/robotomedium"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_get_valor_limite_disponivel"
+        app:layout_constraintTop_toBottomOf="@id/tv_cartao_credito" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_forward2"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic__arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_get_valor_fatura_atual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_get_valor_fatura_atual" />
+
+    <TextView
+        android:id="@+id/tv_limite_disponivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Limite disponível"
+        android:fontFamily="@font/robotoregular"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fatura_atual" />
+
+    <TextView
+        android:id="@+id/tv_get_valor_limite_disponivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text=""
+        android:fontFamily="@font/robotomedium"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_limite_disponivel"
+        app:layout_constraintStart_toEndOf="@+id/tv_limite_disponivel"
+        app:layout_constraintTop_toTopOf="@+id/tv_limite_disponivel" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="#DFD8D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_get_valor_limite_disponivel" />
+
+    <TextView
+        android:id="@+id/text_seguro_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Seguros"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2" />
+
+    <LinearLayout
+        android:id="@+id/linear_seguros"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_seguro_titulo"
+        app:layout_constraintStart_toStartOf="@+id/text_seguro_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/text_seguro_titulo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_seguro_vida"
+            android:layout_width="172dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="2"
+            android:background="@drawable/backgound_shape_rectangule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_seguro_titulo">
+
+            <ImageView
+                android:id="@+id/iv_seguro_vida"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_seguro_vida_rosa"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_seguro_vida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:text="Seguro de Vida"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_seguro_vida"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_seguro_vida"
+                app:layout_constraintTop_toTopOf="@+id/iv_seguro_vida" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_seguro_catao"
+            android:layout_width="172dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="2"
+            android:background="@drawable/backgound_shape_rectangule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_seguro_titulo">
+
+            <ImageView
+                android:id="@+id/iv_seguro_cartao"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_seguro_cartao_rosa"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_seguro_cartao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:text="Seguro Cartão"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_seguro_cartao"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_seguro_cartao"
+                app:layout_constraintTop_toTopOf="@+id/iv_seguro_cartao" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="#DFD8D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_seguros" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_recarga"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/backgound_shape_rectangule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line3">
+
+        <TextView
+            android:id="@+id/tv_recarga_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/robotomedium"
+            android:text="Recarga de Celular"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_recarga"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_smartphone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_recarga_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_recarga_home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_recarga" />
+
+    <ImageView
+        android:id="@+id/iv_pontos_horizontais"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_saldo_disponivel"
+        app:layout_constraintEnd_toEndOf="@+id/tv_saldo_disponivel"
+        app:layout_constraintTop_toTopOf="@+id/tv_saldo_disponivel"
+        app:srcCompat="@drawable/pontos_horizontais_" />
+
+    <ImageView
+        android:id="@+id/iv_pontos_horizontais2"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_get_valor_fatura_atual"
+        app:layout_constraintStart_toStartOf="@+id/tv_get_valor_fatura_atual"
+        app:layout_constraintTop_toTopOf="@+id/tv_get_valor_fatura_atual"
+        app:srcCompat="@drawable/pontos_horizontais_" />
+
+    <ImageView
+        android:id="@+id/iv_pontos_horizontais3"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_get_valor_limite_disponivel"
+        app:layout_constraintStart_toStartOf="@+id/tv_get_valor_fatura_atual"
+        app:layout_constraintTop_toTopOf="@+id/tv_get_valor_limite_disponivel"
+        app:srcCompat="@drawable/pontos_horizontais_" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

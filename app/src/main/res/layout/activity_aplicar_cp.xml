@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contas.AplicarCP">
+
+    <ImageView
+        android:id="@+id/header_aplicar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_clear_aplicar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header_aplicar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header_aplicar"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <ImageView
+        android:id="@+id/iv_aplicar"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_aplicar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_aplicar" />
+
+
+    <TextView
+        android:id="@+id/tv_aplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Aplicar"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_aplicar"
+        app:layout_constraintStart_toEndOf="@+id/iv_aplicar"
+        app:layout_constraintTop_toTopOf="@+id/iv_aplicar" />
+
+
+    <TextView
+        android:id="@+id/tv_saldo_aplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Valor disponível na poupança "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_aplicar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_aplicar" />
+
+    <TextView
+        android:id="@+id/tv_saldo_disponivel_aplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_saldo_aplicar"
+        app:layout_constraintStart_toEndOf="@+id/tv_saldo_aplicar"
+        app:layout_constraintTop_toTopOf="@+id/tv_saldo_aplicar" />
+
+    <TextView
+        android:id="@+id/tv_saldo_cc_aplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Valor disponível na corrente "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_saldo_aplicar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_saldo_aplicar" />
+
+    <TextView
+        android:id="@+id/tv_saldo_disponivel_cc_aplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_saldo_cc_aplicar"
+        app:layout_constraintStart_toEndOf="@+id/tv_saldo_cc_aplicar"
+        app:layout_constraintTop_toTopOf="@+id/tv_saldo_cc_aplicar" />
+
+    <TextView
+        android:id="@+id/tv_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/robotolight"
+        android:text="@string/informe_o_valor_que_deseja_guardar_na_poupan_a"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_saldo_cc_aplicar"
+        app:layout_constraintTop_toBottomOf="@id/tv_saldo_disponivel_cc_aplicar" />
+
+    <!--<com.blackcat.currencyedittext.CurrencyEditText
+        android:id="@+id/edt_valor_aplicar"
+        style="@style/Edit_Text_Login"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:inputType="text"
+        android:textSize="35sp"
+        android:textColor="@color/rosa3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_descricao"/>-->
+
+    <EditText
+        android:id="@+id/edt_valor_aplicar"
+        style="@style/Edit_Text_Login"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/cifrao"
+        android:gravity="end"
+        android:hint="0,00"
+        android:inputType="text"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_descricao" />
+
+
+    <Button
+        android:id="@+id/button_aplicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_buttom"
+        android:text="Aplicar"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

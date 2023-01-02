@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/constraint_geral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash.SubSplashActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".usuario.LoginActivity">
+
+
+        <TextView
+            android:id="@+id/tv_confirmar_recarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
+            android:text="@string/confirmar_recarga"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_confirmar_transacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/digite_sua_senha_para_confirmar_a_transa_o"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_confirmar_recarga" />
+
+        <EditText
+            android:id="@+id/edt_senha_confirmacao"
+            style="@style/Edit_Text_Login"
+            android:layout_marginTop="24dp"
+            android:autofillHints=""
+            android:drawableEnd="@drawable/eyes"
+            android:hint="@string/txt_senha_login"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:textColorHint="@color/rosa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_confirmar_transacao" />
+
+        <Button
+            android:id="@+id/btn_confirmar_transacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_buttom"
+            android:text="@string/confirmar_transa_o"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/edt_senha_confirmacao"
+            app:layout_constraintStart_toStartOf="@+id/edt_senha_confirmacao"
+            app:layout_constraintTop_toBottomOf="@+id/edt_senha_confirmacao" />
+
+        <TextView
+            android:id="@+id/tv_confirmar_biometria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/ou_utilize_o_leitor_de_biometria_do_seu_celular"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/edt_senha_confirmacao"
+            app:layout_constraintStart_toStartOf="@+id/edt_senha_confirmacao"
+            app:layout_constraintTop_toBottomOf="@+id/btn_confirmar_transacao" />
+
+        <ImageView
+            android:id="@+id/iv_biometria"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:contentDescription="@string/todo"
+            android:focusable="true"
+            android:src="@drawable/fingerprint"
+            app:layout_constraintEnd_toEndOf="@+id/edt_senha_confirmacao"
+            app:layout_constraintStart_toStartOf="@+id/edt_senha_confirmacao"
+            app:layout_constraintTop_toBottomOf="@+id/tv_confirmar_biometria" />
+
+
+        <!--<ProgressBar
+            android:id="@+id/progress_bar_login"
+            android:layout_width="2dp"
+            android:layout_height="2dp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/rosa"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

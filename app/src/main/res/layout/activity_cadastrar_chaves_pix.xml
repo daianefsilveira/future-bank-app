@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transacoes.CadastrarChavePixActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/rosa"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_clear_chaves_pix"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <ImageView
+        android:id="@+id/iv_pix_rosa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_pix_rosa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"/>
+
+    <TextView
+        android:id="@+id/tv_cadastrar_chave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Cadastrar Chave Pix"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pix_rosa"
+        app:layout_constraintStart_toEndOf="@+id/iv_pix_rosa"
+        app:layout_constraintTop_toTopOf="@id/iv_pix_rosa" />
+
+    <TextView
+        android:id="@+id/tv_selecione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Selecione  os tipos de chave que você quer vincular à sua \nconta."
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cadastrar_chave" />
+
+    <CheckBox
+        android:id="@+id/cb_todas"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_selecione"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selecione" />
+
+    <TextView
+        android:id="@+id/tv_selecionar_todas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Selecionar Todas"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/cb_todas"
+        app:layout_constraintTop_toTopOf="@+id/cb_todas"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_todas"/>
+
+    <CheckBox
+        android:id="@+id/cb_cpf"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/cb_todas"
+        app:layout_constraintTop_toBottomOf="@+id/cb_todas" />
+
+    <TextView
+        android:id="@+id/tv_cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="CPF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/cb_cpf"
+        app:layout_constraintTop_toTopOf="@+id/cb_cpf"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_cpf"/>
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/edt_get_cpf"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
+        android:hint="Digite o cpf"
+        android:inputType="number"
+        android:textSize="15sp"
+        app:mask="___.___.___-__"
+        app:maskCharacter="_"
+        app:maskStyle="completable"
+        app:layout_constraintStart_toStartOf="@+id/tv_cpf"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cpf" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_get_cpf" />
+
+    <CheckBox
+        android:id="@+id/cb_celular"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/cb_cpf"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <TextView
+        android:id="@+id/tv_celular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Celular"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/cb_celular"
+        app:layout_constraintTop_toTopOf="@+id/cb_celular"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_celular"/>
+
+     <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/edt_get_celular"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
+        android:hint="Digite o celular"
+        android:inputType="number"
+        android:textSize="15sp"
+        app:mask="+55 (__) _____ __ __"
+        app:maskCharacter="_"
+        app:maskStyle="completable"
+        app:layout_constraintStart_toStartOf="@+id/tv_celular"
+        app:layout_constraintTop_toBottomOf="@+id/tv_celular" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_get_celular" />
+
+    <CheckBox
+        android:id="@+id/cb_email"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/cb_celular"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="E-mail"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/cb_email"
+        app:layout_constraintTop_toTopOf="@+id/cb_email"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_email"/>
+
+    <EditText
+        android:id="@+id/edt_get_email"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
+        android:hint="Digite o e-mail"
+        android:inputType="textEmailAddress"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_email"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_get_email" />
+
+    <CheckBox
+        android:id="@+id/cb_chave_aleatoria"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/cb_email"
+        app:layout_constraintTop_toBottomOf="@+id/line_3" />
+
+    <TextView
+        android:id="@+id/tv_chave_aletoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Chave Aleatória"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/cb_chave_aleatoria"
+        app:layout_constraintTop_toTopOf="@+id/cb_chave_aleatoria"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_chave_aleatoria"/>
+
+    <TextView
+        android:id="@+id/tv_txt_chave_aletoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotolight"
+        android:text="Indicada para quem não quer cadastrar seus dados \ncomo chave."
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/tv_chave_aletoria"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chave_aletoria"
+        />
+
+    <Button
+        android:id="@+id/btn_cadastrar_chave_pix"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_buttom"
+        android:fontFamily="@font/robotomedium"
+        android:text="Cadastrar chaves selecionadas"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_txt_chave_aletoria" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

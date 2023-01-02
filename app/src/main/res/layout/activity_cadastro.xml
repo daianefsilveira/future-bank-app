@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="40dp"
+    tools:context=".usuario.CadastroActivity">
+
+    <TextView
+        android:id="@+id/tv_future"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotobolditalic"
+        android:gravity="center"
+        android:text="Future"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_bank"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.488" />
+
+    <TextView
+        android:id="@+id/tv_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotobolditalic"
+        android:gravity="center"
+        android:text="BANK"
+        android:textColor="@color/rosa"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_future"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_future" />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logo_t3"
+        app:layout_constraintStart_toStartOf="@+id/tv_bank"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_abrir_conta"
+        style="@style/Text_View_Login_e_Cadastro"
+        android:layout_marginTop="32dp"
+        android:text="@string/txt_abrir_uma_conta"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/tv_dados_pessoais"
+        style="@style/Text_View_Login_e_Cadastro"
+        android:layout_marginTop="20dp"
+        android:text="Dados Pessoais"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_abrir_conta" />
+
+    <EditText
+        android:id="@+id/edt_nome"
+        style="@style/Edit_Text_Cadastro"
+        android:hint="@string/txt_nome_completo"
+        android:layout_marginTop="16dp"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dados_pessoais"
+        app:layout_constraintStart_toStartOf="@+id/tv_dados_pessoais"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dados_pessoais" />
+
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/edt_telefone"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_marginTop="16dp"
+        android:hint="@string/txt_telefone"
+        android:inputType="number"
+        android:textColorHint="@color/rosa"
+        app:mask="+55 (__) _____ __ __"
+        app:maskCharacter="_"
+        app:maskStyle="completable"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nome"
+        app:layout_constraintStart_toStartOf="@+id/edt_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nome"/>
+
+    <!--<EditText
+        android:id="@+id/edt_telefone"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_marginTop="16dp"
+        android:hint="@string/txt_telefone"
+        android:inputType="number"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nome"
+        app:layout_constraintStart_toStartOf="@+id/edt_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nome" />-->
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/edt_cpf"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_marginTop="16dp"
+        android:hint="@string/txt_cpf"
+        android:inputType="number"
+        android:textColorHint="@color/rosa"
+        app:mask="___.___.___-__"
+        app:maskCharacter="_"
+        app:maskStyle="completable"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nome"
+        app:layout_constraintStart_toStartOf="@+id/edt_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edt_telefone"/>
+
+    <!--<EditText
+        android:id="@+id/edt_cpf"
+        style="@style/Edit_Text_Cadastro"
+        android:hint="@string/txt_cpf"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nome"
+        app:layout_constraintStart_toStartOf="@+id/edt_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edt_telefone" />-->
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/edt_nascimento"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_marginTop="16dp"
+        android:hint="@string/txt_nascimento"
+        android:inputType="number"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nome"
+        app:layout_constraintStart_toStartOf="@+id/edt_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edt_cpf"
+        app:mask="__/__/____"
+        app:maskCharacter="_"
+        app:maskStyle="completable" />
+
+    <!--<EditText
+        android:id="@+id/edt_nascimento"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_marginTop="16dp"
+        android:hint="@string/txt_nascimento"
+        android:inputType="number"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/edt_cpf"
+        app:layout_constraintStart_toStartOf="@+id/edt_cpf"
+        app:layout_constraintTop_toBottomOf="@+id/edt_cpf" />-->
+
+    <TextView
+        android:id="@+id/tv_dados_endereço"
+        style="@style/Text_View_Login_e_Cadastro"
+        android:layout_marginTop="32dp"
+        android:text="Dados de Endereço"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nascimento" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_cep_btn"
+        android:layout_width="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dados_endereço"
+        app:layout_constraintStart_toStartOf="@+id/tv_dados_endereço"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dados_endereço">
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/edt_cep"
+            style="@style/Edit_Text_Endereco"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/txt_cep"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:textColorHint="@color/rosa"
+            app:mask="_____-___"
+            app:maskCharacter="_"
+            app:maskStyle="completable" />
+
+        <!--<EditText
+            android:id="@+id/edt_cep"
+            style="@style/Edit_Text_Endereco"
+            android:layout_width="150dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/txt_cep"
+            android:inputType="number"
+            android:textColorHint="@color/rosa"
+            app:layout_constraintStart_toStartOf="@+id/tv_dados_endereço"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dados_endereço" />-->
+
+        <Button
+            android:id="@+id/btn_buscar_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="3"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/custom_buttom"
+            android:text="Buscar"
+            android:textColor="@color/white"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <!--<EditText
+        android:id="@+id/edt_cep"
+        style="@style/Edit_Text_Endereco"
+        android:layout_width="150dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/txt_cep"
+        android:inputType="number"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintStart_toStartOf="@+id/tv_dados_endereço"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dados_endereço" />-->
+
+    <EditText
+        android:id="@+id/edt_logradouro"
+        style="@style/Edit_Text_Endereco"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:hint="@string/txt_logradouro"
+        android:inputType="text"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/linear_layout_cep_btn"
+        app:layout_constraintStart_toStartOf="@+id/linear_layout_cep_btn"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_cep_btn" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_numero_bairro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/edt_logradouro"
+        app:layout_constraintStart_toStartOf="@+id/edt_logradouro"
+        app:layout_constraintTop_toBottomOf="@+id/edt_logradouro">
+
+    <EditText
+        android:id="@+id/edt_numero"
+        style="@style/Edit_Text_Endereco"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:hint="@string/txt_numero"
+        android:inputType="number"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintStart_toStartOf="@+id/edt_logradouro"
+        app:layout_constraintTop_toBottomOf="@+id/edt_logradouro" />
+
+    <EditText
+        android:id="@+id/edt_bairro"
+        style="@style/Edit_Text_Endereco"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="4"
+        android:hint="@string/txt_bairro"
+        android:inputType="text"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/edt_logradouro"
+        app:layout_constraintStart_toEndOf="@+id/edt_numero"
+        app:layout_constraintTop_toBottomOf="@+id/edt_logradouro" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_cidade_estado_pais"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/edt_logradouro"
+        app:layout_constraintStart_toStartOf="@+id/edt_logradouro"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_numero_bairro">
+
+        <EditText
+            android:id="@+id/edt_cidade"
+            style="@style/Edit_Text_Endereco"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="3"
+            android:hint="@string/txt_cidade"
+            android:inputType="text"
+            android:textColorHint="@color/rosa"
+            app:layout_constraintStart_toStartOf="@+id/edt_numero"
+            app:layout_constraintTop_toBottomOf="@+id/edt_numero" />
+
+        <EditText
+            android:id="@+id/edt_estado"
+            style="@style/Edit_Text_Endereco"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0"
+            android:hint="@string/txt_estado"
+            android:inputType="text"
+            android:textColorHint="@color/rosa"
+            app:layout_constraintEnd_toStartOf="@+id/edt_pais"
+            app:layout_constraintStart_toEndOf="@+id/edt_cidade"
+            app:layout_constraintTop_toBottomOf="@+id/edt_bairro" />
+
+        <EditText
+            android:id="@+id/edt_pais"
+            style="@style/Edit_Text_Endereco"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="2"
+            android:hint="@string/txt_pais"
+            android:inputType="text"
+            android:textColorHint="@color/rosa"
+            app:layout_constraintEnd_toEndOf="@+id/edt_bairro"
+            app:layout_constraintTop_toBottomOf="@+id/edt_bairro" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_dados_acesso"
+        style="@style/Text_View_Login_e_Cadastro"
+        android:layout_marginTop="32dp"
+        android:text="Dados de Acesso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_cidade_estado_pais" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_marginTop="16dp"
+        android:hint="@string/txt_email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/linear_layout_cidade_estado_pais"
+        app:layout_constraintStart_toStartOf="@+id/linear_layout_cidade_estado_pais"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dados_acesso" />
+
+    <EditText
+        android:id="@+id/edt_senha"
+        style="@style/Edit_Text_Cadastro"
+        android:layout_marginTop="12dp"
+        android:hint="@string/txt_senha"
+        android:inputType="numberPassword"
+        android:textColorHint="@color/rosa"
+        app:layout_constraintEnd_toEndOf="@+id/edt_email"
+        app:layout_constraintStart_toStartOf="@+id/edt_email"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+    <Button
+        android:id="@+id/btn_criar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/custom_buttom"
+        android:text="Cadastrar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edt_senha"
+        app:layout_constraintStart_toStartOf="@+id/edt_senha"
+        app:layout_constraintTop_toBottomOf="@+id/edt_senha" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_cadastro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="#DFD8D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_criar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
